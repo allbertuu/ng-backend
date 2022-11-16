@@ -21,21 +21,21 @@ model User {
 }
 
 model Account {
-  id                  String       @id @default(uuid())
-  balance             Int // saldo
-  user                User?
-  transationsDebited  Transation[] @relation("TransationsDebited")
-  transitionsCredited Transation[] @relation("TransationsCredited")
+  id                   String        @id @default(uuid())
+  balance              Int // saldo
+  user                 User?
+  transactionsDebited  Transaction[] @relation("TransactionsDebited")
+  transactionsCredited Transaction[] @relation("TransactionsCredited")
 
   @@map("accounts")
 }
 
-model Transation {
+model Transaction {
   id                String  @id @default(uuid())
-  debitedAccount    Account @relation("TransationsDebited", fields: [debitedAccountId], references: [id])
+  debitedAccount    Account @relation("TransactionsDebited", fields: [debitedAccountId], references: [id])
   debitedAccountId  String
-  creditedAccount   Account @relation("TransationsCredited", fields: [creditedAccountId], references: [id])
+  creditedAccount   Account @relation("TransactionsCredited", fields: [creditedAccountId], references: [id])
   creditedAccountId String
 
-  @@map("transations")
+  @@map("transactions")
 }
