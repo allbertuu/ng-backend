@@ -31,11 +31,13 @@ model Account {
 }
 
 model Transaction {
-  id                String  @id @default(uuid())
-  debitedAccount    Account @relation("TransactionsDebited", fields: [debitedAccountId], references: [id])
+  id                String   @id @default(uuid())
+  debitedAccount    Account  @relation("TransactionsDebited", fields: [debitedAccountId], references: [id])
   debitedAccountId  String
-  creditedAccount   Account @relation("TransactionsCredited", fields: [creditedAccountId], references: [id])
+  creditedAccount   Account  @relation("TransactionsCredited", fields: [creditedAccountId], references: [id])
   creditedAccountId String
+  value             Int
+  createdAt         DateTime @default(now())
 
   @@map("transactions")
 }
