@@ -2,7 +2,7 @@
   "name": "ng-backend",
   "version": "1.0.0",
   "description": "Backend do NG.CASH (desafio fictício)",
-  "main": "index.js",
+  "main": "src/server.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "ts-node-dev --exit-child --ignore-watch node_modules src/server.ts",
