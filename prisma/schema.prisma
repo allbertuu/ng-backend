@@ -13,7 +13,7 @@ datasource db {
 model User {
   id        String  @id @default(uuid())
   username  String  @unique
-  password  Int // VER QUAL SERÁ O TIPO
+  password  String
   account   Account @relation(fields: [accountId], references: [id])
   accountId String  @unique
 
@@ -22,7 +22,7 @@ model User {
 
 model Account {
   id                   String        @id @default(uuid())
-  balance              Int // saldo
+  balance              Int
   user                 User?
   transactionsDebited  Transaction[] @relation("TransactionsDebited")
   transactionsCredited Transaction[] @relation("TransactionsCredited")
