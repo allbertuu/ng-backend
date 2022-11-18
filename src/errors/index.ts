@@ -3,19 +3,19 @@ import { NextFunction, Request, Response } from 'express';
 export const userAlreadyExists = {
     message: 'User already exists',
     statusCode: 409,
-    error: 'Conflict',
+    status: 'Conflict',
 };
 // username ou password é inválido
 export const usernameOrPasswordInvalid = {
     message: 'Username or password is invalid',
     statusCode: 400,
-    error: 'Bad Request',
+    status: 'Bad Request',
 };
 // username não está cadastrado
 export const userIsNotRegistered = {
     message: 'User is not registered',
     statusCode: 404,
-    error: 'Not Found',
+    status: 'Not Found',
 };
 
 export function handleErrors(
@@ -37,5 +37,5 @@ export function handleErrors(
 
     return res
         .status(500)
-        .json({ statusCode: 500, error: 'Internal server error' });
+        .json({ statusCode: 500, status: 'Internal server error' });
 }
