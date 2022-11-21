@@ -76,6 +76,7 @@ Rodar testes (Jest) (**ATUALIZAÇÃO FUTURA**)
 -   Prisma ORM (para criação e manipulação no DB - PostgreSQL)
 -   express-async-errors (para lidar com erros no Backend - criei um módulo personalizado para erros)
 -   jwt-decode (para decode do Token JWT)
+-   CI/CD no GitHub Actions para formatação do código automatizado (Prettier)
 
 ## Regras de negócio para estruturação dos _endpoints_ 📑
 
