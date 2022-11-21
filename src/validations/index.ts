@@ -15,6 +15,6 @@ export const isPasswordValid = (password: string) => {
     const passwordFormatted = password.trim().replaceAll(' ', '');
     const regex = /^((?=\S*?[A-Z])(?=\S*?[a-z])(?=\S*?[0-9]).{7,})\S$/;
 
-    if (passwordFormatted.search(regex) === -1) return false;
+    if (!regex.test(passwordFormatted)) return false;
     return true;
 };
