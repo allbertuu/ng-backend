@@ -15,7 +15,12 @@
 
 ## Rodando localmente ▶
 
-> Nesse projeto é usado apenas o Yarn como gerenciador de pacotes. Veja o website oficial do Yarn [aqui](https://yarnpkg.com/).
+> Nesse projeto é usado apenas o Yarn como gerenciador de pacotes. Veja o website oficial do Yarn [aqui](https://yarnpkg.com/).  
+> Você pode usar as minhas credenciais para acessar o DB em deploy, e gerar o Token JWT. Só adicionar no seu arquivo `.env` o seguinte:  
+```
+DATABASE_URL="postgres://albertosantos:C5PiXQwjOpoKoxNRPbR01mBKuKmVOZKz@dpg-cdtme42en0hlde3rojr0-a.oregon-postgres.render.com/ngdatabase"
+SECRET_TOKEN="94f37b8fea19dcd3e9ad4283af4aa2e2"
+```
 
 Clone o projeto
 
