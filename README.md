@@ -129,7 +129,7 @@ Segue alguns projetos relacionados
 
 ## Documentação da API 🧱
 
-Instale o Insomnia e importe esse [arquivo JSON](https://drive.google.com/file/d/1HF9fhqjjoLlfzcN-CLRS6xqYem5OuBYW/view?usp=sharing) com a coleção NG Backend.
+Instale o Insomnia e importe esse [arquivo JSON](https://drive.google.com/file/d/1kMBBRL9dz5t78u_8HFJ0lnPw18RO1Bj8/view?usp=share_link) com a coleção NG Backend.
 
 **Importante:** lembre de gerar um Token JWT em uma sessão de Login (rota /session), e alterar o `AuthorizationToken` no Sub Environment, para então fazer as requisições à API devidamente autenticado (Token dura 24h).
 
