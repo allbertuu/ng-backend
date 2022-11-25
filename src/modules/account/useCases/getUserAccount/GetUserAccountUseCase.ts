@@ -15,6 +15,7 @@ export class GetUserAccountUseCase {
             where: {
                 user: { id: userId },
             },
+            include: { user: { select: { username: true } } },
         });
 
         if (!userAccount) throw new Error(userIsNotAuthorized.message);
